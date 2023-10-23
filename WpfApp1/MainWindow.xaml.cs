@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -53,8 +54,51 @@ namespace WpfApp1
             student.GrouppId = int.Parse(studentgroupid.Text);
             student.Birthday = studentdate.SelectedDate.Value;
             academyContext.Students.Add(student);
-            academyContext.Students.Add(student);
             academyContext.SaveChanges();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            int id = int.Parse(removegroup.Text);
+            foreach (var item in academyContext.Groupps.ToList())
+            {
+                if (item.Id == id)
+                {
+                    academyContext.Groupps.Remove(item);
+
+                }
+            }
+        }
+
+
+
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            int id2 = int.Parse(removeteacherr.Text);
+            foreach (var item in academyContext.Teachers.ToList())
+            {
+                if (item.Id == id2)
+                {
+                    academyContext.Teachers.Remove(item);
+                }
+            }
+        }
+
+
+
+
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            int id3 = int.Parse(removestudent.Text);
+            foreach (var item in academyContext.Students.ToList())
+            {
+                if (item.Id == id3)
+                {
+                    academyContext.Students.Remove(item);
+                }
+            }
         }
     }
 }

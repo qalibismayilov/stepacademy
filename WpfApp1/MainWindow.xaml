@@ -6,21 +6,33 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Add group" HorizontalAlignment="Left" Margin="34,43,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="Button_Click"/>
-        <TextBox x:Name="group" HorizontalAlignment="Left" Margin="34,161,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29"  />
-        <Button Content="Add teacher" HorizontalAlignment="Left" Margin="219,43,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="Button_Click_1"/>
-        <TextBox x:Name="teachername" HorizontalAlignment="Left" Margin="219,161,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29"/>
-        <Button Content="Add student" HorizontalAlignment="Left" Margin="400,43,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="Button_Click_2"/>
-        <TextBox x:Name="studentname" HorizontalAlignment="Left" Margin="400,98,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="566,43,0,0" VerticalAlignment="Top" Height="35" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="566,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="29"/>
-        <TextBox x:Name="teachergroupid" HorizontalAlignment="Left" Margin="219,248,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29"/>
-        <TextBox x:Name="teacherpermission" HorizontalAlignment="Left" Margin="219,0,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Center" Width="120" Height="29"/>
-        <TextBox x:Name="studentsurname" HorizontalAlignment="Left" Margin="400,146,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="30" />
-        <TextBox x:Name="studentaverage" HorizontalAlignment="Left" Margin="400,0,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Center" Width="120" Height="29"/>
-        <TextBox x:Name="studentgroupid" HorizontalAlignment="Left" Margin="400,248,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29"/>
-        <DatePicker x:Name="studentdate" HorizontalAlignment="Left" Margin="409,321,0,0" VerticalAlignment="Top"/>
+    <Grid x:Name="removeteacher" Background="DarkBlue">
+        <Button Content="Add group" HorizontalAlignment="Left" Margin="34,43,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="Button_Click" Background="DarkGreen"/>
+        <TextBox x:Name="group" HorizontalAlignment="Left" Margin="34,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29"  Background="DarkGreen"/>
+        <Button Content="Add teacher" HorizontalAlignment="Left" Margin="197,43,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="Button_Click_1" Background="DarkGreen"/>
+        <TextBox x:Name="teachername" HorizontalAlignment="Left" Margin="197,107,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29" Background="DarkGreen"/>
+        <Button Content="Add student" HorizontalAlignment="Left" Margin="378,43,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="Button_Click_2" Background="DarkGreen"/>
+        <TextBox x:Name="studentname" HorizontalAlignment="Left" Margin="378,107,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="30" Background="DarkGreen"/>
+        <TextBox x:Name="teachergroupid" HorizontalAlignment="Left" Margin="197,233,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29" Background="DarkGreen"/>
+        <TextBox x:Name="teacherpermission" HorizontalAlignment="Left" Margin="197,173,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29" Background="DarkGreen"/>
+        <TextBox x:Name="studentsurname" HorizontalAlignment="Left" Margin="378,173,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29" Background="DarkGreen"/>
+        <TextBox x:Name="studentaverage" HorizontalAlignment="Left" Margin="378,233,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29" Background="DarkGreen"/>
+        <TextBox x:Name="studentgroupid" HorizontalAlignment="Left" Margin="378,290,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Height="29" Background="DarkGreen"/>
+        <DatePicker x:Name="studentdate" HorizontalAlignment="Left" Margin="387,340,0,0" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Margin="34,89,0,0" TextWrapping="Wrap" Text="           Name" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="197,89,0,0" TextWrapping="Wrap" Text="           Name" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="197,155,0,0" TextWrapping="Wrap" Text="        Permission" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="197,215,0,0" TextWrapping="Wrap" Text="          GroupId" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="378,89,0,0" TextWrapping="Wrap" Text="           Name" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="378,155,0,0" TextWrapping="Wrap" Text="          Surname" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="378,272,0,0" TextWrapping="Wrap" Text="          GroupId" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="378,215,0,0" TextWrapping="Wrap" Text="          Average" VerticalAlignment="Top" Width="120" Height="18"/>
+        <Button Content="remove group" HorizontalAlignment="Left" Margin="34,170,0,0" VerticalAlignment="Top" Height="26" Width="120"  Background="DarkGreen" Click="Button_Click_3"/>
+        <Button Content="remove student" HorizontalAlignment="Left" Margin="378,378,0,0" VerticalAlignment="Top" Height="26" Width="120"  Background="DarkGreen" Click="Button_Click_5"/>
+        <Button Content="remove teacher" HorizontalAlignment="Left" Margin="197,278,0,0" VerticalAlignment="Top" Height="26" Width="120"  Background="DarkGreen" Click="Button_Click_4"/>
+        <TextBox x:Name="removegroup" HorizontalAlignment="Left" Margin="34,196,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Background="#FF8DC172"/>
+        <TextBox x:Name="removestudent" HorizontalAlignment="Left" Margin="378,404,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Background="#FF8DC172" />
+        <TextBox x:Name="removeteacherr" HorizontalAlignment="Left" Margin="197,304,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120" Background="#FF8DC172" />
 
     </Grid>
 </Window>
